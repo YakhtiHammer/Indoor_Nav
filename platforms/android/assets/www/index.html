@@ -6,6 +6,7 @@
         <!-- <meta name="format-detection" content="telephone=no"> -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />
         <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="css/lib/jquery.typeahead.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <title>HRW-Indoor Navigation</title>
     </head>
@@ -19,7 +20,7 @@
 	    </section>
 
         <nav class="nav" ng-controller="NavCtrl">
-		<a href="#home" ng-click="menu='home'" ng-class="{active: menu=='home'}">
+		<a href="#home:panel=0" ng-click="menu='home'" ng-class="{active: menu=='home'}">
 			<span class="icon-home"></span>
 		</a>
 		<a href="#about" ng-click="menu='about'" ng-class="{active: menu=='about'}">
@@ -32,6 +33,11 @@
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/lib/jquery.js"> </script>
     	<script type="text/javascript" src="js/lib/angular.js"> </script>
+        <script type="text/javascript" src="js/lib/typeahead.jquery.min.js"> </script>
+        <script type="text/javascript" src="js/lib/typeahead.bundle.min.js"> </script>
+        <script type="text/javascript" src="js/lib/bloodhound.min.js"> </script>
+        <script type="text/javascript" src="js/lib/angular-typeahead.min.js"> </script>
+
 
     	<script type="text/javascript" src="js/controller/NavCtrl.js"> </script>
 
