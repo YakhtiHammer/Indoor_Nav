@@ -35,7 +35,7 @@ document.addEventListener('deviceready',function(){
 },false);
 
 
-var app=angular.module('app',[]);
+var app=angular.module('app',['siyfion.sfTypeahead']);
 
 app.config(function($routeProvider){
 	$routeProvider
@@ -44,3 +44,6 @@ app.config(function($routeProvider){
 	.when('/history',{templateUrl:'pages/history.html'})
 	.otherwise({redirectTo:'/home'})
 });
+
+
+

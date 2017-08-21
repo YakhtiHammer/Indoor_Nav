@@ -1,30 +1,40 @@
 
 <section ng-controller="Navigation">
 
-	<a class="back" ng-hide="panel==0" ng-click="panel=0"><span class="icon-arrow-left"></span></a>
+
+	 <a class="back" ng-hide="panel==0" ng-click="panel=0">
+	 	<span class="icon-arrow-left"></span>
+	 </a>
 
 
- <section 		class="panel panel-padding" 	ng-hide="panel==1" ng-class="{center:panel==0, left:panel>0}">
+	 <section class="panel panel-padding" ng-hide="panel==1" ng-class="{center:panel==0, left:panel>0}">
 
- 		<p>Bienvenue sur ma superbe appli météo !</p>
+		<p>Welcome bei indoor Navigation de</p>
 
 
- 		<form ng-submit="search()">
+		<form ng-submit="search()" >
+			
+			<div class="form-group">
+				
+					<input type="text"  name="rooms" id="rooms" class="typeahead " autocomplete="off"  placeholder="Ihre Ziel suchen" sf-typeahead options="exampleOptions" datasets="roomsDataset" ng-model="selectedRoom">
+				
 
- 			<p>
- 				<input type="text" class="text" placeholder="Ihre Ziel suchen" ng-model="city">
- 			</p>
+					<br/>
+					<br/>
+					<input type="submit" class="submit" value="Suchen" />
+				
+			</div>
 
- 			<p>
- 				<input type="submit" class="submit" value="Suchen" />
- 			</p>
+		</form>
 
- 		</form>
- 	</section>
 
-		<section 		class="panel panel-padding right"  ng-hide="panel==0" ng-class="{center:panel==1, right:panel<1}">
 
-		<img src="pages/map1.svg" alt="SVG mit img Tag laden" class="map">
+
+	 </section>
+
+	<section class="panel panel-padding right"  ng-hide="panel==0" ng-class="{center:panel==1, right:panel<1}">
+
+			<img src="pages/map1.svg" alt="SVG mit img Tag laden" class="map">
 
 	</section>
 
